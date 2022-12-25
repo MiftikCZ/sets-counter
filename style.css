@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&family=Lato:ital,wght@0,400;0,700;0,900;1,400&family=Poppins:wght@200;400&family=Roboto:ital,wght@0,300;0,400;0,500;1,400&display=swap');
+
+:root {
+    font-size: 20px;
+    --hue: 270;
+    --color85: hsl(0, 0%, 85%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    height: 100vh;
+    color: hsl(0, 0%, 85%);
+    background: #0c0c11;
+    padding: 8px;
+}
+
+#addcont {
+    padding: 18px;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.addcont {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 20px;
+    width: 100%;
+    max-width: 500px;
+    max-height: 600px;
+    border: #0002 6px solid;
+    background: hsla(240, 21%, 65%, 0.067);
+    height: 100%;
+    overflow-y: auto;
+}
+
+.addcont .a1 {
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+    margin-bottom: 60px;
+}
+
+.addcont .a1 .title {
+    font-size: 1.25em;
+    font-weight: bold;
+}
+
+.addcont .a2 {
+    top: 0;
+    align-self: flex-start;
+    position: sticky;
+    flex-direction: row;
+    display: flex;
+    width: 100%;
+    gap: 0.5em;
+}
+
+.addcont .a2 .complete {
+    position: sticky;
+    width: 100%;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    background: hsl(var(--hue), 54%, 60%);
+    border: none;
+    color: hsl(120,20%,5%);
+    font-size: 1.25em;
+    cursor: pointer;
+}
+
+
+.addcont .a2 .exit {
+    aspect-ratio: 1 / 1;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    background: none;
+    border: none;
+    color: var(--color85);
+    font-size: 1.25em;
+    cursor: pointer;
+}
+
+
+.addcont .a1 .podtitle {
+    margin-top: 40px;
+}
+
+select {
+    font-family: "Poppins";
+    margin-top: 8px;
+    padding: 0.5em;
+    font-size: 1em;
+    background: hsl(var(--hue), 24%, 60%);
+    border: none;
+    border-radius: 0.5em;
+}
+
+[type="range"] {
+    accent-color: hsl(var(--hue), 24%, 60%);
+}
+
+[type="number"] {
+    padding: 0.5em;
+    font-size: 1em;
+    background: none;
+    color: var(--color85);
+    border: none;
+    border-bottom: hsl(var(--hue), 24%, 60%) 3px solid;
+    accent-color: hsl(var(--hue), 54%, 60%);
+}

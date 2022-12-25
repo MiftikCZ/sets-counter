@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sets Counter</title>
+    <script src="https://kit.fontawesome.com/3dc9caaf6f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <style>
+        * {
+            text-decoration: none;
+        }
+
+        .addcont .a2 {
+            width: 100%;
+            margin-top: 18px;
+            display: flex;
+        }
+
+        .addcont .a2 .complete {
+            padding: 1em;
+            border-radius: 0.5em;
+            background: hsl(var(--hue), 54%, 60%);
+            border: none;
+            color: hsl(120, 20%, 5%);
+            font-size: 1em !important;
+            cursor: pointer;
+        }
+
+        .addcont .a2 a {
+            width: 100%;
+        }
+
+
+
+        .addcont .a2 .exit {
+            display: flex;
+            aspect-ratio: unset;
+            padding: 1em;
+            border-radius: 0.5em;
+            border: none;
+            color: hsl(0,50%,75%);
+            font-size: 1em;
+            cursor: pointer;
+            background: hsl(0, 68%, 36%);
+        }
+
+        .red {
+            font-weight: bold;
+            color: hsl(0, 68%, 60%);
+        }
+    </style>
+    <div id="addcont">
+        <div class="addcont">
+            <div class="title">Vážně chceš resetovat svůj progress?</div>
+            <div class="title red">Tato akce nejde vrátit!</div>
+            <div class="a2">
+                <button class="exit" onclick="reset()">
+                    Resetovat
+                </button>
+                <a href="./main.html">
+                    <button class="complete compl">
+                        Vrátit se
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

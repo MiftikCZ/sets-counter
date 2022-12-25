@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sets Counter</title>
+    <script src="https://kit.fontawesome.com/3dc9caaf6f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="loadAdd()">
+    <div id="addcont">
+        <div class="addcont">
+            <div class="a1">
+                <span class="title">Přidání nového setu</span>
+                <select name="setname" id="setname">
+                    <option value="null">Nic</option>
+                    
+                </select>
+    
+                <span class="podtitle">Intenzita</span>
+                <select name="intenzita" id="intenzita">
+                    <option value="3">Do selhání</option>
+                    <option value="2">Pump</option>
+                    <option value="1">Warm Up</option>
+                </select>
+
+                <span class="podtitle">Sets</span>
+                <input type="number" name="sets" id="sets" value="1" placeholder="Kolik setů chceš přidat?">
+            </div>
+            <div class="a2">
+                <button class="complete" onclick="addOne()">Přidat</button>
+                <a href="./main.html">
+                    <button class="exit">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </a>
+            </div>
+        </div>
+        </div>
+        <script src="script.js"></script>
+</body>
+</html>
