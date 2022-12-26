@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sets Counter - Nastavení</title>
+    <script src="https://kit.fontawesome.com/3dc9caaf6f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="list.css">
+    <link rel="stylesheet" href="vars.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+    <link rel="shortcut icon" href="icon.svg" type="image/x-icon">
+    <script src="script.js"></script>
+</head>
+
+<body onload="loadList()">
+    <div class="addcont">
+        <div class="a1">
+            <span class="title">Upravení seznamu</span>
+            <center>
+                <ul id="list"></ul>
+                
+            </center>
+
+
+            <div style="max-width:500px;display:flex;flex-direction: column;justify-content: start;width: 100%;align-self: center;">
+                <div style="margin-top: 12px;display:flex;gap:5px;flex-direction:column">
+                    <div class="removeLast" onclick="removeLast()">
+                        Smazat poslední
+                    </div>
+    
+                    <div class="removeLast" onclick="resetList()">
+                        Resetovat
+                    </div>
+                </div>
+                <span class="podtitle">Kategorie</span>
+                <select name="kategorie" id="kategorie">
+                    <option value="6">Výchozí</option>
+                    <option value="1">Push</option>
+                    <option value="2">Pull</option>
+                    <option value="3">Ramena</option>
+                    <option value="4">Core / Střed</option>
+                    <option value="5">Nohy</option>
+                    <option value="6">Ostatní</option>
+                </select>
+                
+
+                <span class="podtitle">Název</span>
+                <div class="addcont2">
+                    <input type="text" name="ename" id="ename" placeholder="Jak se bude nový cvik jmenovat?">
+                    <button class="add" onclick="addToList()">
+                        <i class="fa-solid fa-add"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="a2">
+            <a href="./main.html" >
+                <button class="complete">Vrátit se</button>
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>

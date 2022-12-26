@@ -9,17 +9,7 @@ body {
     padding: 8px;
 }
 
-#addcont {
-    padding: 18px;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 
 .addcont {
     position: relative;
@@ -28,11 +18,9 @@ body {
     border-radius: 20px;
     padding: 20px;
     width: 100%;
-    max-width: 500px;
-    max-height: 600px;
+    height: 100%;
     border: #0002 6px solid;
     background: hsla(240, 21%, 65%, 0.067);
-    height: 100%;
     overflow-y: auto;
 }
 
@@ -48,32 +36,49 @@ body {
     font-weight: bold;
 }
 
-
-
-.addcont .a2  {
-    bottom: 0;
+.addcont .a2 {
+    transform: translateX(-50%);
+    max-width: 500px;
+    left: 50%;
+    padding: 18px 50px;
+    bottom: 12px;
     justify-content: center;
-    position: sticky;
+    position: fixed;
+    width: 100%;
     flex-direction: row;
     display: flex;
-    width: 100%;
     gap: 0.5em;
 }
 
-.addcont .a2  .complete {
+.a2 a {
+    width: 100%;
+}
+
+.a2 .complete {
     position: relative;
     width: 100%;
     padding: 0.5em;
     border-radius: 0.5em;
     background: hsl(var(--hue), 54%, 60%);
     border: none;
-    color: hsl(120,20%,5%);
+    color: hsl(120, 20%, 5%);
     font-size: 1.25em;
     cursor: pointer;
 }
 
+.removeLast {
+    position: relative;
+    width: 100%;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    background: hsl(var(--hue), 54%, 60%);
+    border: none;
+    color: hsl(120, 20%, 5%);
+    font-size: 1em;
+    cursor: pointer;
+}
 
-.addcont .a2 .exit {
+.a2 .exit {
     aspect-ratio: 1 / 1;
     padding: 0.5em;
     border-radius: 0.5em;
@@ -104,7 +109,7 @@ select {
     accent-color: hsl(var(--hue), 24%, 60%);
 }
 
-[type="number"] {
+[type="text"] {
     padding: 0.5em;
     font-size: 1em;
     background: none;
@@ -112,4 +117,67 @@ select {
     border: none;
     border-bottom: hsl(var(--hue), 24%, 60%) 3px solid;
     accent-color: hsl(var(--hue), 54%, 60%);
+}
+
+#list {
+    width: 100%;
+    list-style: none;
+    max-width: 500px;
+    padding: 0;
+    margin: 0;
+    margin-top: 0.7em;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+#list .element {
+    justify-content: start;
+    display: flex;
+    width: 100%;
+    background: hsl(var(--hue), 20%, 20%);
+    color: hsl(var(--hue),0%,80%);
+    border-radius: 8px;
+    padding: 0.4em;
+    font-size: 1em;
+}
+
+#list .element i {
+    color: hsl(var(--hue),0%,50%);
+}
+
+#list .element span {
+    width: 100%;
+}
+
+.addcont2 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+}
+
+.addcont2 input {
+    width: 100%;
+}
+
+.addcont2 button {
+    display: inline-flex;
+    aspect-ratio: 1 / 1;
+    height: 100%;
+    padding: calc(0.5em + 3px);
+    border-radius: 0.5em;
+    background: none;
+    border: none;
+    align-items: center;
+    background: hsl(var(--hue), 54%, 60%);
+    color: #e5e5e5;
+    font-size: 1.25em;
+    cursor: pointer;   
+}
+
+.fa-solid {
+    justify-content: center;
+    display: flex;
+    align-items: center;
 }

@@ -20,7 +20,7 @@ var data = {
 */
 
 
-var list = [
+var list_ = [
     "1Push up",
     "5Squat",
     "2Pull up",
@@ -36,6 +36,24 @@ var list = [
     "5Any leg exercise",
     "2Any bicep exercise",
 ]
+var list = []
+
+function getlist() {
+    try {
+        list = JSON.parse(data.get("list") || list_)
+    } catch(error) {
+        try {
+            data.save("list",JSON.stringify(list_))
+            list = list_
+        } catch(error) {
+            list = list_
+        }
+    }
+}
+
+window.addEventListener("load", ()=>{
+    getlist()
+})
 
 function addOne() {
     let exerc = document.getElementById("setname").value
@@ -73,6 +91,7 @@ function loadMain() {
 
 function loadAdd() {
     let setname = document.getElementById("setname")
+    getlist()
     list.forEach(e => {
         setname.innerHTML+= `
         <option value="${e.toLowerCase().split(" ").join("").substring(1)}">${e.substring(1)}</option>
@@ -89,4 +108,82 @@ function reset() {
         }
         window.location.reload()
     }
+}
+
+// var sortable = Sortable.create(list, {
+//     animation: 100,
+//     handle: '.handle'
+//   });
+
+function loadList() {
+
+    
+    $( function() {
+        $( "#sortable" ).disableSelection();
+        let sortable = $( "#list" ).sortable({
+            axis: 'y', 
+            update: function(event, ui) {
+                let c = sortable.toArray()[0].children
+                let all = []
+                for(var child in c) {
+                    all.push(c.item(child).getAttribute("katg")+c.item(child).innerText)
+                }
+                all.pop()
+                all.pop()
+                all.pop()
+                //katg
+                if(!!all) {
+                    data.save("list",JSON.stringify(all))
+                    list = all
+                }
+            } 
+        });
+      } );
+      reloadCviky()
+}
+
+function reloadCviky() {
+    let ctx = document.getElementById("list")
+
+
+      ctx.innerHTML = ""
+      list.forEach(e => {
+          let value = Math.floor(parseInt(localStorage.getItem(
+              "exercise-"+e.toLowerCase().split(" ").join("").substring(1)
+          ) || 0) / 3)
+          
+  
+          ctx.innerHTML+=`
+            <li class="element" katg="${e[0]}">
+            <i class="fa-solid fa-grip-vertical"></i>
+            <span>${e.substring(1)}</span>
+            </li>
+          `
+      })
+}
+
+function addToList() {
+    let kat = parseInt(document.getElementById("kategorie").value || 6)
+    let nm = document.getElementById("ename").value
+    if(!nm || isNaN(kat)) return
+    list.push(kat+nm)
+    data.save("list",JSON.stringify(list))
+    document.getElementById("ename").value=""
+    document.getElementById("list").value=""
+    reloadCviky()
+}
+
+function removeLast() {
+    list.pop()
+    data.save("list", JSON.stringify(list))
+    document.getElementById("list").innerHTML=""
+    reloadCviky()
+}
+
+function resetList() {
+    if(window.confirm("Opravdu chceš resetovat seznam cviků do výchozího?")) {
+        data.save("list", JSON.stringify(list_))
+        document.getElementById("list").innerHTML=""
+        window.location.reload()
+    }   
 }

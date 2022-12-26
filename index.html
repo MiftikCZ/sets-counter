@@ -4,10 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sets Counter</title>
+    <title>Gym Sets Counter</title>
     <script src="https://kit.fontawesome.com/3dc9caaf6f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="vars.css">
     <link rel="shortcut icon" href="icon.svg" type="image/x-icon">
+    <meta name="description" content="Webová aplikace pro počítání počtu sérii v posilovně">
+    <meta name="keywords" content="sets counter,počítání sérii,gym sets counter,gym app,gym,fitko,posilovna">
+    <link rel="canonical" href="https://miftikcz.github.io/sets-counter/main.html">
+    <meta name="og:title" property="og:title" content="Počítadlo sérii v posilovně">
 </head>
 <body onload="loadAdd()">
     <div id="addcont">
@@ -27,7 +32,9 @@
                 </select>
 
                 <span class="podtitle">Sets</span>
-                <input type="number" name="sets" id="sets" value="1" placeholder="Kolik setů chceš přidat?">
+                
+                    <input type="number" name="sets" id="sets" value="1" placeholder="Kolik setů chceš přidat?">
+                
             </div>
             <div class="a2">
                 <button class="complete" onclick="addOne()">Přidat</button>

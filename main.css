@@ -1,19 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&family=Lato:ital,wght@0,400;0,700;0,900;1,400&family=Poppins:wght@200;400&family=Roboto:ital,wght@0,300;0,400;0,500;1,400&display=swap');
 
-:root {
-    font-size: 20px;
-    --hue: 270;
-    --color85: hsl(0, 0%, 85%);
-}
-
-* {
-    box-sizing: border-box;
-}
-
 body {
     margin: 0;
-    font-family: "Poppins", sans-serif;
-    font-size: 20px;
     height: 100vh;
     color: hsl(0, 0%, 85%);
     background: #0c0c11;
@@ -62,6 +50,37 @@ header .reset:hover {
     border: #0001 2px solid;
     border-radius: 5px;
     padding-left: 20px;
+    border-left: hsl(var(--hue), 54%, 60%) 6px solid;
+}
+
+.upravit {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    border: #0001 2px solid;
+    border-radius: 5px;
+    padding-left: 20px;
+    border-left: hsl(var(--hue), 54%, 60%) 6px solid;
+    border-right: hsl(var(--hue), 54%, 60%) 6px solid;
+    background: hsla(var(--hue), 54%, 60%, 2%);
+    transition: 250ms;
+    user-select: none;
+}
+
+
+.upravit a {
+    color: var(--color85);
+}
+
+.upravit:hover {
+    background: hsla(var(--hue), 54%, 60%, 15%);
+    
+}
+
+
+.color-0 {
     border-left: hsl(var(--hue), 54%, 60%) 6px solid;
 }
 
@@ -127,4 +146,8 @@ main {
     body {
         font-size: 16px;
     }
+}
+
+.fa-solid {
+    vertical-align: middle;
 }

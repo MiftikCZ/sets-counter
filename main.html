@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sets Counter</title>
+    <title>Sets Counter - Hlavní</title>
     <script src="https://kit.fontawesome.com/3dc9caaf6f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="main.css">
     <script src="script.js"></script>
+    <link rel="stylesheet" href="vars.css">
+    <link rel="shortcut icon" href="icon.svg" type="image/x-icon">
+    <meta name="description" content="Webová aplikace pro počítání počtu sérii v posilovně">
+    <meta name="keywords" content="sets counter,počítání sérii,gym sets counter,gym app,gym,fitko,posilovna">
 </head>
 <body onload="loadMain()">
     <header>
@@ -19,8 +23,13 @@
     </header>
 
     <main>
-        <div id="sets">
+        <div id="sets"> 
         
+        </div>
+        <div class="upravit" onclick="window.location.replace('./list.html')">
+            <a style="width: 100%;justify-content: center;display:flex">
+                upravit
+            </a>
         </div>
     </main>
 </body>
