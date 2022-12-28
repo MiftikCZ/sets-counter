@@ -90,6 +90,36 @@ function loadMain() {
 }
 
 function loadAdd() {
+    if(document.getElementById("setname").value == "null") {
+        document.getElementById("addone").innerText = "Přeskočit"
+        document.getElementById("addone").onclick = ()=>{
+            window.location.replace("./main.html")
+        }
+    
+    } else {
+        document.getElementById("addone").innerText = "Přidat"
+        document.getElementById("addone").onclick = ()=>{
+            addOne()
+        }
+    
+    }
+    document.getElementById("setname").addEventListener("change", ()=>{
+        if(document.getElementById("setname").value == "null") {
+            document.getElementById("addone").innerText = "Přeskočit"
+            document.getElementById("addone").onclick = ()=>{
+                window.location.replace("./main.html")
+            }
+        
+        } else {
+            document.getElementById("addone").innerText = "Přidat"
+            document.getElementById("addone").onclick = ()=>{
+                addOne()
+            }
+        
+        }
+    })
+    
+
     let setname = document.getElementById("setname")
     getlist()
     list.forEach(e => {
@@ -109,11 +139,6 @@ function reset() {
         window.location.reload()
     }
 }
-
-// var sortable = Sortable.create(list, {
-//     animation: 100,
-//     handle: '.handle'
-//   });
 
 function loadList() {
 
