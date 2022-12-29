@@ -147,6 +147,7 @@ function loadList() {
         $( "#sortable" ).disableSelection();
         let sortable = $( "#list" ).sortable({
             axis: 'y', 
+            handle:".handle",
             update: function(event, ui) {
                 let c = sortable.toArray()[0].children
                 let all = []
@@ -180,7 +181,7 @@ function reloadCviky() {
   
           ctx.innerHTML+=`
             <li class="element" katg="${e[0]}">
-            <i class="fa-solid fa-grip-vertical"></i>
+            <i class="fa-solid fa-grip-vertical handle"></i>
             <span>${e.substring(1)}</span>
             </li>
           `

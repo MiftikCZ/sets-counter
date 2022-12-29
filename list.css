@@ -5,7 +5,7 @@ body {
     margin: 0;
     height: 100vh;
     color: hsl(0, 0%, 85%);
-    background: #0c0c11;
+    background: hsl(240, 17%, 6%);
     padding: 8px;
 }
 
@@ -180,4 +180,8 @@ select {
     justify-content: center;
     display: flex;
     align-items: center;
+}
+
+.handle {
+    box-sizing: border-box;
 }
