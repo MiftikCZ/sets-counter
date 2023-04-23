@@ -171,7 +171,8 @@ select {
     border: none;
     align-items: center;
     background: hsl(var(--hue), 54%, 60%);
-    color: #e5e5e5;
+    /* color: hsl(var(--hue), 100%, 80%); */
+    color: hsl(270, 20%, 5%);
     font-size: 1.25em;
     cursor: pointer;   
 }
@@ -184,4 +185,20 @@ select {
 
 .handle {
     box-sizing: border-box;
+}
+
+.containerInList {
+    max-width:500px;
+    display:flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 100%;
+    align-self: center;
+}
+
+.addNewTitle {
+    margin-top: 1rem;
+    margin-bottom: -20px;
+    font-size: 1.2em;
+    font-weight: bold;
 }
